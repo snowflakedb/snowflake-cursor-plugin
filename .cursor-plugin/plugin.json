@@ -1,0 +1,8 @@
+{
+  "name": "snowflake",
+  "description": "Connect Cursor to Snowflake for Cortex Search, Cortex Analyst, SQL execution, Cortex Agents, and custom tools",
+  "author": {
+    "name": "Snowflake"
+  },
+  "keywords": ["snowflake", "mcp", "cortex", "data", "sql", "search", "analyst", "agent"],
+}
