@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "Snowflake": {
-      "url": "<SNOWFLAKE_MCP_SERVER_URL>",
+      "url": "${SNOWFLAKE_MCP_SERVER_URL}",
       "headers": {
-        "Authorization": "Bearer <SNOWFLAKE_PAT_TOKEN>"
+        "Authorization": "Bearer ${SNOWFLAKE_PAT_TOKEN}"
       }
     }
   }

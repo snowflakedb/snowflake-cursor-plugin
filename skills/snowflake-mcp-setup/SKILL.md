@@ -33,18 +33,32 @@ Your [account URL](https://docs.snowflake.com/en/user-guide/admin-account-identi
 
 ### 3. Configure mcp.json
 
-Replace the placeholder values in `mcp.json` with your MCP server URL and PAT:
+The `mcp.json` is already configured to read from environment variables:
 
 ```json
 {
   "mcpServers": {
     "Snowflake": {
-      "url": "<SNOWFLAKE_MCP_SERVER_URL>",
+      "url": "${SNOWFLAKE_MCP_SERVER_URL}",
       "headers": {
-        "Authorization": "Bearer <SNOWFLAKE_PAT_TOKEN>"
+        "Authorization": "Bearer ${SNOWFLAKE_PAT_TOKEN}"
       }
     }
   }
 }
 ```
+
+Before using the MCP server, make sure the following environment variables are set in your shell:
+
+- **`SNOWFLAKE_MCP_SERVER_URL`** — Your full MCP server URL (see step 2).
+- **`SNOWFLAKE_PAT_TOKEN`** — The Programmatic Access Token generated in step 1.
+
+For example, add them to your shell profile (e.g. `~/.zshrc`):
+
+```sh
+export SNOWFLAKE_MCP_SERVER_URL="https://<orgname>-<account_name>.snowflakecomputing.com/api/v2/databases/<database>/schemas/<schema>/mcp-servers/<server_name>"
+export SNOWFLAKE_PAT_TOKEN="your-pat-token-here"
+```
+
+Then restart Cursor (or reload the window) so it picks up the new environment variables.
 
