@@ -5,4 +5,18 @@
     "name": "Snowflake"
   },
   "keywords": ["snowflake", "mcp", "cortex", "data", "sql", "search", "analyst", "agent"],
+  "variables": {
+    "type": "object",
+    "properties": {
+      "SNOWFLAKE_MCP_SERVER_URL": {
+        "type": "string",
+        "title": "Snowflake MCP URL"
+      },
+      "SNOWFLAKE_PAT_TOKEN": {
+        "type": "string",
+        "title": "Personal Access Token"
+      }
+    },
+    "required": ["SNOWFLAKE_MCP_SERVER_URL", "SNOWFLAKE_PAT_TOKEN"]
+  }
 }
